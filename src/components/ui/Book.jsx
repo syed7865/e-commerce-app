@@ -19,7 +19,7 @@ const Book = ({ book }) => {
       }, 300);
     };
     return () => {
-      mountedRef.current = false;
+      mountedRef.current = true;
     };
   });
 
@@ -45,11 +45,10 @@ const Book = ({ book }) => {
         </>
       ) : (
         <>
-          {" "}
           <div className="book__img--skeleton"></div>
           <div className="skeleton book__title--skeleton"></div>
           <div className="skeleton book__rating--skeleton"></div>
-          <div className="skeleton book__price--skeleton"></div>{" "}
+          <div className="skeleton book__price--skeleton"></div>
         </>
       )}
     </div>
